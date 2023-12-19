@@ -119,6 +119,7 @@
 	text-decoration: none;
 	display: inline-block;
 	transition: background-color .3s;
+	cursor: pointer;
 }
 
 .btn__type__primary {

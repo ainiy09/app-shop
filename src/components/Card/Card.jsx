@@ -2,7 +2,7 @@ import "../Card/styles.css";
 import save from './save.svg';
 
 
-const Card = ({name, price, discount, wight, description, picture}) => {
+const Card = ({name, price, discount, wight, description, pictures}) => {
     const discount_price = Math.round(price - price/100*discount)
     return (
         <div className="card">
@@ -21,7 +21,7 @@ const Card = ({name, price, discount, wight, description, picture}) => {
 				</button>
             </div>
             <a href="/product" className="card__link">
-                <img src={picture} alt={description} className="card__picture" />
+                <img src={pictures} alt={description} className="card__picture" />
                 <div className="card__desc">
                     <span className={!!discount ? 'card__old-price' : 'card__price'}>{price}&nbsp;Р</span>
                     {!!discount && <span className="card__price card__price_type_discount">{discount_price}&nbsp;Р</span>}
